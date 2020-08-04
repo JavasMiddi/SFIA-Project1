@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block body_content %}
-<h1>{{ current_user.first_name }} {{ current_user.last_name }}'s  Account Page</h1>
+<center><h1>{{ current_user.first_name }} {{ current_user.last_name }}'s  Account Page</h1>
     <p>Update your details here!</p>
     <div class='form'>
         <form method='POST' action=''>
@@ -50,4 +50,3 @@
 	</form>
     </div>
 {% endblock %}
-

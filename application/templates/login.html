@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block body_content %}
-<h1> Login Here: </h1>
+<center><h1> Login Here: </h1>
 <div class='form'>
     <form method='POST' action=''>
         {{ form.hidden_tag() }}
@@ -35,6 +35,6 @@
 	<br>
         <div>
             {{ form.submit }}  <button onclick="location.href='{{ url_for('register') }}'">Register</button>
-</div></form>
+</div></form><center>
 {% endblock %}
 

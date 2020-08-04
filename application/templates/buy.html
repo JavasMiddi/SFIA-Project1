@@ -1,4 +1,76 @@
 {% extends "layout.html" %}
 {% block body_content %}
-    <p1> Welcome to my first web app! </p1>
-{% endblock %}
+<center><h2>Purchase Your Tickets Below:</h2>
+    <p>La Fiesta is a standing venue, thus all tickets are the <b>same price</b>-:</p>
+    <p> <i>Standard Admission: £72 pp</i></p>
+	<div class='form'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.first_name.label }}
+                {{ form.first_name }}
+                {% if form.first_name.errors %}
+                <div class="error">
+                    {% for error in form.first_name.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <br>
+            <div class="form-group">
+                {{ form.last_name.label }}
+                {{ form.last_name }}
+                {% if form.last_name.errors %}
+                <div class="error">
+                    {% for error in form.last_name.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+	    <br>
+            <div class='form_group'>
+                {{ form.email.label }}
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <div class='error'>
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+	    <br>
+	    <div class='form_group'>
+                {{ form.confirm_email.label }}
+                {{ form.confirm_email }}
+                {% if form.confirm_email.errors %}
+                    <div class='error'>
+                        {% for error in form.confirm_email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+	    <br>
+		<div>
+ 	    	<select name="number" id="tickets">
+    	    	<option value="1">1</option>
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+    		<option value="4">4</option>
+		<option value="5">5</option>
+  		</select>
+ 	    </div>
+  		<input type="submit" value="Submit">
+		{{ form.tickets.label }}
+		{{ form.tickets }}
+	    </div>
+	    <div class='form_group'>
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
+{% endblock %}  
+

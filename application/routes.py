@@ -1,13 +1,14 @@
 from application import app, db, bcrypt
 from flask import render_template, redirect, url_for, request
-from application.forms import RegistrationForm, LoginForm, UpdateAccountForm
-from application.models import Customer
+from application.forms import RegistrationForm, LoginForm, UpdateAccountForm, PurchaseForm
+from application.models import Customer, Artist
 from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route('/')
 @app.route('/home')
 def home():
-	return render_template('home.html', title='Home')
+	lineUp = Artist.query.limit(5).all()
+	return render_template('home.html', title='Home', artists=lineUp)
 
 @app.route('/about')
 def about():
@@ -27,6 +28,7 @@ def register():
 			)
 		db.session.add(user)
 		db.session.commit()
+		return redirect(url_for('login'))
 
 	return render_template('register.html', title='Register', form=form)
 
@@ -36,12 +38,12 @@ def login():
 		return redirect(url_for('home'))
 	form = LoginForm()
 	if form.validate_on_submit():
-		user = Users.query.filter_by(email=form.email.data).first()
+		user = Customer.query.filter_by(email=form.email.data).first()
 		if user and bcrypt.check_password_hash(user.password, form.password.data):
 			login_user(user, remember=form.remember.data)
 			next_page = request.args.get('next')
 			if next_page:
-				return redirect(next_page)
+				return redirect('home')
 			else:
 				return redirect('home')
 	return render_template('login.html', title='Login', form=form)
@@ -49,7 +51,8 @@ def login():
 @app.route('/buy', methods=['GET', 'POST'])
 @login_required
 def buy():
-	return render_template('buy.html', title='buy')
+	form = PurchaseForm()
+	return render_template('buy.html', title='Buy', form=form)
 			
 @app.route('/logout')
 @login_required
@@ -81,4 +84,4 @@ def account_delete():
     logout_user()
     db.session.delete(account)
     db.session.commit()
-    return redirect(url_for('register'))
+    return redirect(url_for('login'))

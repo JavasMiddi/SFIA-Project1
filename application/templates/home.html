@@ -1,7 +1,16 @@
 {% extends 'layout.html' %}
 {% block body_content %}
-	<h1>Welcome to La Fiesta de Piscina!</h1>
-	<p> Buy your tickets online <a href="{{ url_for('buy') }}">here!</a></p>
+	<center><h1>Welcome to La Fiesta de Piscina!</h1>
+	<p> *****Buy your tickets online <a href="{{ url_for('buy') }}">here!
+	</a>*****</p></center>
+	<h3><b><u>La Fiesta's Headliners:</u></b></h3>
+	{% for artist in artists %}
+	<div>
+	<h3><li>{{ artist.name }}</li></h3>
+	<p><b> - Genre: </b>{{ artist.genre }}</p>
+        <p><b> - Type: </b>{{ artist.type }}</p>
+	</div>
+{% endfor %}
 {% endblock %}
 >
 
