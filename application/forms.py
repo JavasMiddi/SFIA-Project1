@@ -87,10 +87,18 @@ class PurchaseForm(FlaskForm):
         validators = [
             DataRequired(),
             EqualTo('email') ])
-
+   
+    number = [
+	('1'), ('2'), ('3'), ('4'), ('5') ]
+   
     tickets = SelectField('Number of Tickets: ',
 	choices=number,
 	validators = [
 	    DataRequired()
 		])	       
+
     submit = SubmitField('Purchase')
+
+    def validate_email(self, email):
+        if email.data != current_user.email:
+            raise ValidationError("Email didn't match!")
