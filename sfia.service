@@ -3,10 +3,10 @@ Description=Flask Project
 [Service]
 User=sfia
 WorkingDirectory=/opt/sfia
-EnvironmentFile=/opt/sfia/sfia.env
+EnvironmentFile=/opt/sfia/sfia1.env
 ExecStart=/bin/sh \
 	-c 'cd /opt/sfia && \
-	. ./venv/bin/sfia && \
+	. ./venv/bin/activate && \
 	gunicorn --workers=4 --bind=0.0.0.0:5000 app:app'
 [Install]
 WantedBy=multi-user.target
