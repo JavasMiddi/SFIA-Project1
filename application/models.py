@@ -14,12 +14,8 @@ class Artist(db.Model, UserMixin):
 	name = db.Column(db.String(100), nullable=False)
 	genre = db.Column(db.String(30), nullable=False)
 	type = db.Column(db.String(30), nullable=False) 
+	slot = db.relationship('timeSlot', backref='artist', lazy=True)
 
-	def __repr__(self):
-	    return ''.join([
-		'Name: ', self.name, '\r\n',
-            	'Type: ', self.type, '\r\n',
-            ])
 class timeSlot(db.Model, UserMixin):
 	id = db.Column(db.Integer, primary_key=True)
 	ArtistID = db.Column(db.Integer, db.ForeignKey('artist.id'), 
@@ -34,7 +30,9 @@ class Order(db.Model, UserMixin):
 		nullable=False)
 	email = db.Column(db.String(150), db.ForeignKey('customer.email'), 
 		nullable=False)
-	total = db.Column(db.Integer, nullable=False)
+	tickets = db.Column(db.Integer, nullable=False)
+	custid = db.relationship("Customer", foreign_keys=[CustID])
+	custemail = db.relationship("Customer", foreign_keys=[email])
 
 @login_manager.user_loader
 def load_user(id):
