@@ -2,10 +2,10 @@
 Description=SFIA Project
 [Service]
 User=sfia
-WorkingDirectory=/opt/SFIA-Project1
-EnvironmentFile=/opt/SFIA-Project1/sfia.env
+WorkingDirectory=/opt/sfia1
+EnvironmentFile=/opt/sfia1/sfia.env
 ExecStart =/bin/sh \
-	-c 'cd /opt/SFIA-Project1 && \
+	-c 'cd /opt/sfia1 && \
 	. ./venv/bin/activate && \
 	gunicorn --workers=4 --bind=0.0.0.0:5000 app:app'
 [Install]
