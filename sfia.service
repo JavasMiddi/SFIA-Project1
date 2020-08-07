@@ -1,5 +1,5 @@
 [Unit]
-Description = SFIA Project
+Description=SFIA Project
 [Service]
 User=sfia
 WorkingDirectory=/opt/SFIA-Project1
