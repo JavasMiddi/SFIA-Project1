@@ -37,6 +37,7 @@ ________________________________________________________________________________
 ## Application Deployment Process
 
 ### Technologies Used and Overview of Development
+#### (- In a rough chronological order of implementation)
 
 #### A multitude of diverse, intuitive technologies were combined in order to successfully build, develop and deliver this project.
 
