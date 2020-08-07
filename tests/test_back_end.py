@@ -129,11 +129,46 @@ class TestOrderAdd(TestBase):
         with self.client:
             self.client.post(
                 url_for("login"),
-                data = dict(email="admin@admin.com", password = "admin2016"
+                data=dict(email="admin@admin.com", password = "admin2016"
                 ), follow_redirects = True )
             response = self.client.post(
                 url_for("buy"), data = dict( first_name = "admin",
                     last_name = "admin", email = "admin@admin.com",
                     confirm_email = "admin@admin.com",
                     tickets = 3 ), follow_redirects = True)
+            self.assertEqual(response.status_code, 200)
+
+    def test_update_order(self):
+        with self.client:
+            self.client.post(
+                url_for("login"),
+                data=dict(email="admin@admin.com", password = "admin2016"
+                ), follow_redirects = True )
+            response = self.client.post(
+                url_for("buy"), data = dict( first_name = "admin",
+                    last_name = "admin", email = "admin@admin.com",
+                    confirm_email = "admin@admin.com",
+                    tickets = 3 ), follow_redirects = True)
+            response = self.client.post(
+                url_for("order_update"), data=dict(id = "1",
+                    email = "admin@admin.com",
+                    tickets = 5 ), follow_redirects = True)
+            self.assertEqual(response.status_code, 200)
+
+    def test_update_order(self):
+        with self.client:
+            self.client.post(
+                url_for("login"),
+                data=dict(email="admin@admin.com", password = "admin2016"
+                ), follow_redirects = True )
+            response = self.client.post(
+                url_for("buy"), data = dict( first_name = "admin",
+                    last_name = "admin", email = "admin@admin.com",
+                    confirm_email = "admin@admin.com",
+                    tickets = 3 ), follow_redirects = True)
+            self.assertEqual(response.status_code, 200)
+            response = self.client.post(
+                url_for("order_delete"), data=dict(id = "1",
+                    email = "admin@admin.com",
+                    tickets = 5 ), follow_redirects = True)
             self.assertEqual(response.status_code, 200)
