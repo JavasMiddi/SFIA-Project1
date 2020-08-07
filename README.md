@@ -15,12 +15,13 @@ ________________________________________________________________________________
 
 ### Entity Relationship Diagrams
 As part of the planning process of the project, an ERD was constructed to set out the relational database and its associating relationships. 
+
 ### Risk Assessment
 The risk assessment was constructed using the format of a risk register, which was amended throughout the entirety of the project - setting out intial events to be considered, and evaluated at the end to ensure all risk were taken into consideration.
 _________________________________________________________________________________________________________________________________________________________________
 
 ## Testing
-The project was built around the concept of TDD (Test Driven Development). Being the core value of the development, it had a major role to play if the project were to be successful.
+The project was built around the concept of TDD (Test Driven Development). Being the core value of the development, it had a major role to play if the project were to be successful. Test coverage at current stage in development is a respectable 82%.
 
 Testing methods such as Unit Testing and Integration Testing were implemented throughout the program, using a number of frameworks such as:
   - Werkzeug (Flask Unit Testing)
@@ -63,9 +64,11 @@ ________________________________________________________________________________
 
 ## Future Improvements
 
-Currently,  
-In my next sprint, I would like to
-In later sprints, I would also like to 
+Currently, the application has been successfully integrated with Jenkins and has deployed as service. CRUD functionality has been met via the MVP. 
+
+In my next sprint, I would like to develop the application further by making use of the last entity - the timeSlot table. After the input of data, I would like to present it alongside the artists, thus a schedule being made. 
+
+In later sprints, I would also like to utilise the foreign keys in such a way as to allow for the deletion of a customer account, along with all the orders that said account has created. Also, a querying option to select which artists are performing on which day, initialising the relationship between the Artist table and the timeSlot table.
 
 _________________________________________________________________________________________________________________________________________________________________
 
