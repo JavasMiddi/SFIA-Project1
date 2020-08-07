@@ -30,6 +30,7 @@ Testing methods such as Unit Testing and Integration Testing were implemented th
   - Werkzeug (Flask Unit Testing)
   - Flask-testing (Flask Integration Testing
   - Selenium (Flask Integration Testing)
+  - Gunicorn (Web Server Gateway Interface - WSGI)
   - Pytest
   
 _________________________________________________________________________________________________________________________________________________________________  
@@ -43,14 +44,14 @@ ________________________________________________________________________________
   - This is the framework that was used to organise and plan the entire project. Working in an agile way enables the planning of sprints, a product backlog, and     allowing for adaptability. Working in an agile way facilitated the development of the application, testing and documentation simultaneously. Without such fundamentals, the project wouldn't have been completed in the time given, as each change would require backtracking and remapping of the entire plan. 
   
 * [Jira](https://jsandhu.atlassian.net/secure/RapidBoard.jspa?rapidView=6&projectKey=FES&view=planning&selectedIssue=FES-76&issueLimit=100) - Project Tracking
-  - The Jira Board is essentially the backbone of this project. It defines all tasks, which tasks should be completed when (via the use of sprints) and frequent 
-    checks ensure that you don't forget or miss any tasks.
+  - The Jira Board was essentially the backbone of this project. It defined all tasks, which tasks should be completed when (via the use of sprints) and frequent 
+    checks ensure that tasks weren't forgotten or missed.
   
 * Python - Visual Studio Code
   -  Python was also heavily implemented throughout the development of the project, using Jinja2 syntax, it was used to perform operations in the HTML files which allowed for querying and integrating forms and user input. 
   
 * [Git](https://github.com/JavasMiddi/SFIA-Project1) - VCS
-  - The use of Git was imperative in developing the project. It was used to not only hold the repository which contains the entire application, but allowed for the push up of changes to the master version of the project. As a Version Control System, it helps DevOps engineers such as myself to manage the source code, and the project simply wouldn't exist without it. 
+  - The use of Git was imperative in developing the assignment; it was used to not only hold the repository which contains the entire application, but allowed for the push up of changes to the master version of the project. As a Version Control System, it helps DevOps engineers such as myself to manage the source code, and the project simply wouldn't exist without it. 
  
 * GCP - Cloud Service Provider
   - GCP was crucial in the foundation of the project, it was used to configure the virtual environments and all databases associated with the project. The virtual machines were used to manage the source code and provide the first stage of a test environment. GCP also created the link between the source code and the databases, through the use of exported variables, firewalls and ports. 
@@ -69,6 +70,8 @@ ________________________________________________________________________________
   
 * Jenkins - CI Server
   - Jenkins took the basic application and raised it to a higher level of development and implementation. Before the application was integrated with Jenkins, I had to physically start the application through the virtual machine, or through Gunicorn. However, Jenkins truly added automation to the SFIA project. Through the use of jobs and workspaces, automation was configured through Github Webhooks and Build steps. Build steps are essentially the primary linux commands that I would have ran myself physically through the virtual machine. 
+  
+#### Every technology listed above was undeniably paramount in the creation of the project, and the absence of any one technology would hinder the application. 
 _________________________________________________________________________________________________________________________________________________________________
 
 ## Future Improvements
