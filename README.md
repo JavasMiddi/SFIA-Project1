@@ -24,7 +24,7 @@ This form of documentation is used to set the guidelines for the project as an a
 _________________________________________________________________________________________________________________________________________________________________
 
 ## Testing
-The project was built around the concept of TDD (Test Driven Development). Being the core value of the development, it had a major role to play if the project were to be successful. Test coverage at current stage in development is a respectable 82%.
+The project was built around the concept of TDD (Test Driven Development). Being the core value of the development, it had a major role to play if the project were to be successful. Test coverage at current stage in development is a respectable 83%.
 
 Testing methods such as Unit Testing and Integration Testing were implemented throughout the program, using a number of frameworks such as:
   - Werkzeug (Flask Unit Testing)
