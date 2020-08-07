@@ -37,34 +37,38 @@ ________________________________________________________________________________
 
 ### Technologies Used and Overview of Development
 
+#### A multitude of diverse, intuitive technologies were combined in order to successfully build, develop and deliver this project.
+
 * Agile Fundamentals
-  - This is the framework that was used to organise and plan the entire project. Working in an agile way enables the planning of sprints, a product backlog, and     allowing for adaptability. Working in an agile way facilitated the development of the application, testing and documentation simultaneously. Without such
-    fundamentals, the project wouldn't have been completed in the time given, as each change would require backtracking and remapping of the entire plan. 
+  - This is the framework that was used to organise and plan the entire project. Working in an agile way enables the planning of sprints, a product backlog, and     allowing for adaptability. Working in an agile way facilitated the development of the application, testing and documentation simultaneously. Without such fundamentals, the project wouldn't have been completed in the time given, as each change would require backtracking and remapping of the entire plan. 
   
 * [Jira](https://jsandhu.atlassian.net/secure/RapidBoard.jspa?rapidView=6&projectKey=FES&view=planning&selectedIssue=FES-76&issueLimit=100) - Project Tracking
   - The Jira Board is essentially the backbone of this project. It defines all tasks, which tasks should be completed when (via the use of sprints) and frequent 
     checks ensure that you don't forget or miss any tasks.
   
 * Python - Visual Studio Code
-  -  
+  -  Python was also heavily implemented throughout the development of the project, using Jinja2 syntax, it was used to perform operations in the HTML files which allowed for querying and integrating forms and user input. 
   
 * [Git](https://github.com/JavasMiddi/SFIA-Project1) - VCS
-  -
+  - The use of Git was imperative in developing the project. It was used to not only hold the repository which contains the entire application, but allowed for the push up of changes to the master version of the project. As a Version Control System, it helps DevOps engineers such as myself to manage the source code, and the project simply wouldn't exist without it. 
  
 * GCP - Cloud Service Provider
-  - GCP was crucial in the foundation of the project, it was used to configure the virtual environments and all databases associated with the project.
+  - GCP was crucial in the foundation of the project, it was used to configure the virtual environments and all databases associated with the project. The virtual machines were used to manage the source code and provide the first stage of a test environment. GCP also created the link between the source code and the databases, through the use of exported variables, firewalls and ports. 
   
 * Databases & SQL - Fundamentals
-  -
+  - Databases are useless without SQL, the understanding of its principles allowed the databases to be used within the application to the best of their ability. SQL is what performs the CRUD operations on the database at the back end. Again, GCP was the provider for enabling SQL. 
 
 * Linux
-  -
+  - In summary, utilising Linux and its commands created the application. It created the files, directories and enabled the application to deploy as a service. Linux allows for the creation of sudoers and what permissions they have in terms of what they can do with files. 
   
 * Flask 
-  -
+  - Flask made the application possible. As an extensible micro-framework, it gives the engineer the tools to create the application, while allowing for customisation and flexibility. Ranging from a basic web application to a large-scale assignment, it was used create my SFIA Project.
+  
+* HTML 
+  - HTML created the front end of the application, it ensured the user could easily navigate throughout the application, and could perform the necessary operations through redirects and input forms. HTML was crucial for the project, as the operations couldn't be configured without the layout and format that HTML provides. 
   
 * Jenkins - CI Server
-  - 
+  - Jenkins took the basic application and raised it to a higher level of development and implementation. Before the application was integrated with Jenkins, I had to physically start the application through the virtual machine, or through Gunicorn. However, Jenkins truly added automation to the SFIA project. Through the use of jobs and workspaces, automation was configured through Github Webhooks and Build steps. Build steps are essentially the primary linux commands that I would have ran myself physically through the virtual machine. 
 _________________________________________________________________________________________________________________________________________________________________
 
 ## Future Improvements
