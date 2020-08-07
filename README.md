@@ -9,6 +9,7 @@ To create a CRUD application with utilisation of supporting tools, methodologies
 
 ### Proposed Solution
 For this project, I decided to create a CRUD application based around a music festival, where a user could view the headliners, buy tickets to the event and amend the orders that they have made. It would meet the requirements set out by the specification, by utilising all the modules taught, and within the constraints specified, such as having at least 2 tables that share a relationship.
+_________________________________________________________________________________________________________________________________________________________________
 
 ## Architecture
 
