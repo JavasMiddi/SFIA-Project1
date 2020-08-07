@@ -8,7 +8,7 @@ from flask_testing import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from application import app, db, bcrypt
-from application.models import Customer
+from application.models import Customer, Order
 
 # Set test variables for test admin user
 test_admin_first_name = "admin"
@@ -44,7 +44,6 @@ class TestBase(LiveServerTestCase):
         self.assertEqual(response.code, 200)
 
 class TestRegistration(TestBase):
-
     def test_registration(self):
         """
         Test that a user can create an account using the registration form
@@ -71,6 +70,7 @@ class TestRegistration(TestBase):
 
         # Assert that browser redirects to login page
         assert url_for('login') in self.driver.current_url
+    
 
 if __name__ == '__main__':
     unittest.main(port=5000)
