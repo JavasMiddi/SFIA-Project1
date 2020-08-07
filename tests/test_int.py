@@ -14,6 +14,7 @@ test_admin_first_name = "admin"
 test_admin_last_name = "admin"
 test_admin_email = "admin@email.com"
 test_admin_password = "admin2020"
+test_admin_ticketNo= "3"
 
 class TestBase(LiveServerTestCase):
 
@@ -98,7 +99,6 @@ class TestLogin(TestBase):
         # Assert that browser redirects to home page
         assert url_for('home') in self.driver.current_url
 
-
     def test_order(self):
         """
         Test access to order page - can view account page
@@ -114,6 +114,29 @@ class TestLogin(TestBase):
 
         self.driver.find_element_by_xpath("/html/body/div[1]/center/a[4]").click()
         assert url_for('account') in self.driver.current_url
+
+    def test_add_order(self):     
+        """
+        Test to add order
+        """
+        self.driver.find_element_by_xpath("/html/body/div/center/a[4]").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath('//*[@id="email"]').send_keys(test_admin_email)
+        self.driver.find_element_by_xpath('//*[@id="password"]').send_keys(
+            test_admin_password)
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+        assert url_for('home') in self.driver.current_url
+        
+        self.driver.find_element_by_xpath("/html/body/div/center/a[3]").click()
+        
+        # Fill in order form
+        self.driver.find_element_by_xpath('//*[@id="first_name"]').send_keys(test_admin_first_name)
+        self.driver.find_element_by_xpath('//*[@id="last_name"]').send_keys(test_admin_last_name)
+        self.driver.find_element_by_xpath('//*[@id="email"]').send_keys(test_admin_email)
+        self.driver.find_element_by_xpath('//*[@id="confirm_email"]').send_keys(test_admin_email)
+        self.driver.find_element_by_xpath('//*[@id="tickets"]').send_keys(test_admin_ticketNo)
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+        assert url_for('account_orders') in self.driver.current_url
 
 if __name__ == '__main__':
     unittest.main(port=5000)

@@ -65,18 +65,32 @@ class TestBuyAccess(TestBase):
             self.assertIn(b'Login', response.data)
 
 class TestLogin(TestBase):
-	def test_login(self):
-		"""
-		Test that when I login, I am redirected to the homepage
-		"""
-		with self.client:
-			self.client.get(url_for('login'), data=dict(
-			email="admin@admin.com", password="admin2016"), 
-			follow_redirects=True)
-	def test_account(self):
-                with self.client:
-                        self.client.get(url_for('account'), follow_redirects=True)
+    def test_login(self):
+        """
+        Test that when I login, I am redirected to the homepage
+        """
+        with self.client:
+            self.client.get(url_for('login'), data=dict(
+            email="admin@admin.com", password="admin2016"), 
+            follow_redirects=True)
+    
+    def test_account(self):
+        with self.client:
+            self.client.get(url_for('account'), follow_redirects=True)
 
+    def test_update_account(self):
+        with self.client:
+            self.client.post(
+                url_for("login"),
+                data = dict(email="admin@admin.com", password = "admin2016"
+                ), follow_redirects = True )
+            response = self.client.post(
+                url_for("account"), data = dict(first_name = "admin2",  
+                last_name = "admin3", email = "admin@admin2.com"),
+                follow_redirects=True)
+            response = self.client.get(url_for('account'))
+            self.assertEqual(response.status_code, 200)
+                 
 class TestLogout(TestBase):
     def test_logout(self):
         self.client.post(
@@ -84,7 +98,8 @@ class TestLogout(TestBase):
                     password='admin2016'), follow_redirects=True)
         self.client.post(url_for('account'), follow_redirects=True)
         response = self.client.get(url_for('account'))
-        self.assertIn(b'admin',response.data)
+        self.assertIn(b'admin',response.data),
+        self.assertEqual(response.status_code, 200)
 
 class TestAccountDelete(TestBase):
     def test_delete_account(self):
@@ -94,7 +109,8 @@ class TestAccountDelete(TestBase):
         self.client.post(url_for('account'), follow_redirects=True)
         self.client.post(url_for('account_delete'), follow_redirects=True)
         response = self.client.get(url_for('login'))
-        self.assertIn(b'Login',response.data)
+        self.assertIn(b'Login',response.data),
+        self.assertEqual(response.status_code, 200)
 
 class TestRegistration(TestBase):
     def test_register_account(self):
@@ -104,5 +120,20 @@ class TestRegistration(TestBase):
                 password='test', confirm_password='test'),
             follow_redirects=True)
         response=self.client.get('login')
-        self.assertIn(b'Login',response.data)
+        self.assertIn(b'Login',response.data),
+        self.assertEqual(response.status_code, 200)
 
+class TestOrderAdd(TestBase):
+    # the tests for inputting on product pages
+    def test_add_order(self):
+        with self.client:
+            self.client.post(
+                url_for("login"),
+                data = dict(email="admin@admin.com", password = "admin2016"
+                ), follow_redirects = True )
+            response = self.client.post(
+                url_for("buy"), data = dict( first_name = "admin",
+                    last_name = "admin", email = "admin@admin.com",
+                    confirm_email = "admin@admin.com",
+                    tickets = 3 ), follow_redirects = True)
+            self.assertEqual(response.status_code, 200)

@@ -91,7 +91,7 @@ class PurchaseForm(FlaskForm):
         validators = [
             DataRequired(),
             EqualTo('email') ])
-    number = [ ('1'), ('2'), ('3'), ('4'), ('5') ]
+    number = [ '1', '2', '3', '4', '5' ]
     tickets = SelectField('Number of Tickets: ',
         choices=number,
         validators = [
@@ -106,7 +106,7 @@ class UpdatePurchaseForm(FlaskForm):
         validators = [
             DataRequired(),
             Email() ])
-    number = [ ('1'), ('2'), ('3'), ('4'), ('5') ]
+    number = [ '1', '2', '3', '4', '5' ]
     tickets = SelectField('Number of Tickets: ',
         choices=number,
         validators = [
