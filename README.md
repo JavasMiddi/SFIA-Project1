@@ -18,6 +18,9 @@ As part of the planning process of the project, an ERD was constructed to set ou
 
 ### Risk Assessment
 The risk assessment was constructed using the format of a risk register, which was amended throughout the entirety of the project - setting out intial events to be considered, and evaluated at the end to ensure all risk were taken into consideration.
+
+### MoSCoW Prioritisation
+This form of documentation is used to set the guidelines for the project as an application. Using the acronym, it is a way of prioritising what tasks need to be completed first. 
 _________________________________________________________________________________________________________________________________________________________________
 
 ## Testing
@@ -35,10 +38,12 @@ ________________________________________________________________________________
 ### Technologies Used and Overview of Development
 
 * Agile Fundamentals
-  - 
+  - This is the framework that was used to organise and plan the entire project. Working in an agile way enables the planning of sprints, a product backlog, and     allowing for adaptability. Working in an agile way facilitated the development of the application, testing and documentation simultaneously. Without such
+    fundamentals, the project wouldn't have been completed in the time given, as each change would require backtracking and remapping of the entire plan. 
   
 * [Jira](https://jsandhu.atlassian.net/secure/RapidBoard.jspa?rapidView=6&projectKey=FES&view=planning&selectedIssue=FES-76&issueLimit=100) - Project Tracking
-  -
+  - The Jira Board is essentially the backbone of this project. It defines all tasks, which tasks should be completed when (via the use of sprints) and frequent 
+    checks ensure that you don't forget or miss any tasks.
   
 * Python - Visual Studio Code
   -  
@@ -47,7 +52,7 @@ ________________________________________________________________________________
   -
  
 * GCP - Cloud Service Provider
-  -
+  - GCP was crucial in the foundation of the project, it was used to configure the virtual environments and all databases associated with the project.
   
 * Databases & SQL - Fundamentals
   -
