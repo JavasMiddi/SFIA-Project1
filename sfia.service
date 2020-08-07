@@ -1,0 +1,12 @@
+[Unit]
+Description = SFIA Project
+[Service]
+User=sfia
+WorkingDirectory=/opt/SFIA-Project1
+EnvironmentFile=/opt/SFIA-Project1/sfia.env
+ExecStart =/bin/sh \
+	-c 'cd /opt/SFIA-Project1 && \
+	. ./venv/bin/activate && \
+	gunicorn --workers=4 --bind=0.0.0.0:5000 app:app'
+[Install]
+WantedBy=multi-user.target
