@@ -17,6 +17,7 @@ ________________________________________________________________________________
 As part of the planning process of the project, an ERD was constructed to set out the relational database and its associating relationships. 
 ### Risk Assessment
 The risk assessment was constructed using the format of a risk register, which was amended throughout the entirety of the project - setting out intial events to be considered, and evaluated at the end to ensure all risk were taken into consideration.
+_________________________________________________________________________________________________________________________________________________________________
 
 ## Testing
 The project was built around the concept of TDD (Test Driven Development). Being the core value of the development, it had a major role to play if the project were to be successful.
@@ -27,6 +28,7 @@ Testing methods such as Unit Testing and Integration Testing were implemented th
   - Selenium (Flask Integration Testing)
   - Pytest
   
+_________________________________________________________________________________________________________________________________________________________________  
 ## Application Deployment Process
 
 ### Technologies Used and Overview of Development
@@ -57,6 +59,7 @@ Testing methods such as Unit Testing and Integration Testing were implemented th
   
 * Jenkins - CI Server
   - 
+_________________________________________________________________________________________________________________________________________________________________
 
 ## Future Improvements
 
@@ -64,6 +67,7 @@ Currently,
 In my next sprint, I would like to
 In later sprints, I would also like to 
 
+_________________________________________________________________________________________________________________________________________________________________
 
 ## Honorable Mentions
 * QA's own Luke Benson - Trainer
