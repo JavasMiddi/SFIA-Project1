@@ -63,13 +63,15 @@ ________________________________________________________________________________
   - In summary, utilising Linux and its commands created the application. It created the files, directories and enabled the application to deploy as a service. Linux allows for the creation of sudoers and what permissions they have in terms of what they can do with files. 
   
 * Flask 
-  - Flask made the application possible. As an extensible micro-framework, it gives the engineer the tools to create the application, while allowing for customisation and flexibility. Ranging from a basic web application to a large-scale assignment, it was used create my SFIA Project.
+  - Flask made the application possible. As an extensible micro-framework, it gives the engineer the tools to create the application, while allowing for customisation and flexibility. Ranging from a basic web application to a large-scale assignment, it was used create my SFIA Project. Flask also allowed the deployment of application through Gunicorn.
   
 * HTML 
   - HTML created the front end of the application, it ensured the user could easily navigate throughout the application, and could perform the necessary operations through redirects and input forms. HTML was crucial for the project, as the operations couldn't be configured without the layout and format that HTML provides. 
   
 * Jenkins - CI Server
-  - Jenkins took the basic application and raised it to a higher level of development and implementation. Before the application was integrated with Jenkins, I had to physically start the application through the virtual machine, or through Gunicorn. However, Jenkins truly added automation to the SFIA project. Through the use of jobs and workspaces, automation was configured through Github Webhooks and Build steps. Build steps are essentially the primary linux commands that I would have ran myself physically through the virtual machine. 
+  - Jenkins took the basic application and raised it to a higher level of development and implementation. Before the application was integrated with Jenkins, I had to physically start the application through the virtual machine, or through Gunicorn. However, Jenkins truly added automation to the SFIA project. Through the use of jobs and workspaces, automation was configured through Github Webhooks and Build steps. Build steps are essentially the primary linux commands that I would have ran myself physically through the virtual machine. Using Jenkins as the CI Pipeline, it allowed those primary commands to be ran by the click of a button - not only this but the process of the deployment of the application itself ensures that it is deployed correctly.
+
+A separate job is created to run the tests before the application is even built - if all tests are successful and there are no errors within the source code, it triggers a build for the application itself to be built, and deploys it via the specified URL. Without this functionality, Jenkins would continue to build broken versions of the application, which is efficient or practical in any sense.  
   
 #### Every technology listed above was undeniably paramount in the creation of the project, and the absence of any one technology would hinder the application. 
 _________________________________________________________________________________________________________________________________________________________________
