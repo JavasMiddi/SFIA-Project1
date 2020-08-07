@@ -75,9 +75,7 @@ class TestLogin(TestBase):
 			follow_redirects=True)
 	def test_account(self):
                 with self.client:
-                        self.client.get(url_for('account'), data=dict(
-                        email="admin@admin.com", password="admin2016"),
-                        follow_redirects=True)
+                        self.client.get(url_for('account'), follow_redirects=True)
 
 class TestLogout(TestBase):
     def test_logout(self):
