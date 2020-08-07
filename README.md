@@ -46,7 +46,7 @@ ________________________________________________________________________________
   
 * [Jira](https://jsandhu.atlassian.net/secure/RapidBoard.jspa?rapidView=6&projectKey=FES&view=planning&selectedIssue=FES-76&issueLimit=100) - Project Tracking
   - The Jira Board was essentially the backbone of this project. It defined all tasks, which tasks should be completed when (via the use of sprints) and frequent 
-    checks ensure that tasks weren't forgotten or missed.
+    checks ensure that tasks weren't forgotten or missed. Along with the use of Planning Poker, tasks were also assigned story points, which allocates priority and levels of difficult.
   
 * Python - Visual Studio Code
   -  Python was also heavily implemented throughout the development of the project, using Jinja2 syntax, it was used to perform operations in the HTML files which allowed for querying and integrating forms and user input. 
