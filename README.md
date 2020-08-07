@@ -79,7 +79,7 @@ ________________________________________________________________________________
 
 ## Future Improvements
 
-Currently, the application has been successfully integrated with Jenkins and has deployed as service. CRUD functionality has been met via the MVP. 
+Currently, the application has been successfully integrated with Jenkins and has deployed as service. CRUD functionality has successfully been met via the MVP. 
 
 In my next sprint, I would like to develop the application further by making use of the last entity - the timeSlot table. After the input of data, I would like to present it alongside the artists, thus a schedule being made. 
 
