@@ -11,7 +11,7 @@ To create a CRUD application with utilisation of supporting tools, methodologies
 For this project, I decided to create a CRUD application based around a music festival, where a user could view the headliners, buy tickets to the event and amend the orders that they have made. It would meet the requirements set out by the specification, by utilising all the modules taught, and within the constraints specified, such as having at least 2 tables that share a relationship.
 _________________________________________________________________________________________________________________________________________________________________
 
-## Architecture
+## [Architecture](https://docs.google.com/presentation/d/1_xDR19iRin1x-JbXEpeXnpWctO_i5_fxQrBvRhd9zi4/edit#slide=id.p)
 
 ### Entity Relationship Diagrams
 As part of the planning process of the project, an ERD was constructed to set out the relational database and its associating relationships. 
@@ -54,7 +54,7 @@ ________________________________________________________________________________
 * [Git](https://github.com/JavasMiddi/SFIA-Project1) - VCS
   - The use of Git was imperative in developing the assignment; it was used to not only hold the repository which contains the entire application, but allowed for the push up of changes to the master version of the project. As a Version Control System, it helps DevOps engineers such as myself to manage the source code, and the project simply wouldn't exist without it. 
  
-* GCP - Cloud Service Provider
+* [GCP](https://console.cloud.google.com/home/dashboard?cloudshell=true&project=practiceproject-283411) - Cloud Service Provider
   - GCP was crucial in the foundation of the project, it was used to configure the virtual environments and all databases associated with the project. The virtual machines were used to manage the source code and provide the first stage of a test environment. GCP also created the link between the source code and the databases, through the use of exported variables, firewalls and ports. 
   
 * Databases & SQL - Fundamentals
