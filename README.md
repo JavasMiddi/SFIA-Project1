@@ -1,4 +1,4 @@
-# Project SFIA 1 - La Fiesta de Piscina
+# Project SFIA 1 - La Fiesta de Piscina - Test
 
 ## The Brief
 *-Taken directly from the Fundamental Project specification on Community-*
