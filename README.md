@@ -28,7 +28,7 @@ The project was built around the concept of TDD (Test Driven Development). Being
 
 Testing methods such as Unit Testing and Integration Testing were implemented throughout the program, using a number of frameworks such as:
   - Werkzeug (Flask Unit Testing)
-  - Flask-testing (Flask Integration Testing
+  - Flask-testing (Flask Integration Testing)
   - Selenium (Flask Integration Testing)
   - Gunicorn (Web Server Gateway Interface - WSGI)
   - Pytest
